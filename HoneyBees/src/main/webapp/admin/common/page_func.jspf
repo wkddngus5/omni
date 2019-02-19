@@ -1,0 +1,35 @@
+
+<div class="panelBar">
+	<ul class="toolBar">
+		<c:forEach items="${subFunList}" varStatus="sub" var="func">
+
+			<li><a mask="true" class="${func.action_class}"
+				target="${func.action_target}" rel="${func.ref}"
+				<c:if
+				test="${func.action_title != null}">title="${func.action_title}"</c:if>
+				<c:if test="${func.others_tag != null}"> ${func.others_tag} </c:if>
+				<c:if test="${func.idparams == 1}">href="${func.href}
+				<c:if test="${func.checkMore == false}">&id={id_item}</c:if>
+				&funcId=${func.id}"</c:if>
+					<c:if test="${func.idparams == 0}">href="${func.href}&funcId=${func.id}"</c:if>><span>${func.name}
+				</span> </a></li>
+			<c:if test="${sub.count-1 != subFunList.size()-1}">
+				<li class="line">line</li>
+			</c:if>
+		</c:forEach>
+
+		<c:if test="${admin == 1}">
+			<%
+				if (export == true) {
+			%>
+			<li class="line">line</li>
+			<li><a class="edit" onClick="exportData('<%=actionUrl%>')">
+					<span><%=rb.getString("common_export_title")%></span>
+			</a></li>
+			<%
+				}
+			%>
+		</c:if>
+
+	</ul>
+</div>

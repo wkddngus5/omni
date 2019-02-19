@@ -1,0 +1,31 @@
+
+<div class="panelBar">
+	<div class="pages">
+		<span><%=rb.getString("common_display_title")%></span></span> <select
+			class="combox" name="numPerPage"
+			onchange="navTabPageBreak({numPerPage:this.value})">
+
+			<option value="10"
+				<c:if test="${pageSize==10}"> selected="selected" </c:if>>
+				10</option>
+			<option value="30"
+				<c:if test="${pageSize==30}"> selected="selected" </c:if>>30</option>
+			<option value="60"
+				<c:if test="${pageSize==60}"> selected="selected" </c:if>>60</option>
+			<option value="100"
+				<c:if test="${pageSize==100}"> selected="selected" </c:if>>100</option>
+			<option value="500"
+				<c:if test="${pageSize==500}"> selected="selected" </c:if>>500</option>
+			<option value="1000"
+				<c:if test="${pageSize==1000}"> selected="selected" </c:if>>1000</option>
+			<option value="10000"
+				<c:if test="${pageSize==10000}"> selected="selected" </c:if>>10000</option>
+		</select> <span> <%=pageSize.format(new Object[] { request
+					.getAttribute("totalCount") })%>
+		</span>
+	</div>
+
+	<div class="pagination" targetType="navTab" totalCount="${totalCount}"
+		numPerPage="${pageSize}" pageNumShown="6" currentPage="${pageNo}"></div>
+
+</div>

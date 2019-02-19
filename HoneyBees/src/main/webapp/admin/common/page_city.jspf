@@ -1,0 +1,24 @@
+<%@ page language="java" import="com.pgt.bikelock.utils.ValueUtil"  %>
+
+<c:if test="${admin == 1}">
+<div class="unit">
+	<label><%=rb.getString("bike_city_title")%>:</label> <select
+		name="cityId" onchange="cityChanged(this);">
+		<option value="0"><%=rb.getString("common_all_title")%></option>
+		<c:forEach items="${cityList}" varStatus="status" var="city">
+			<option value="${city.id}"
+				<c:if test="${city.id == tagCityId}">selected="selected"</c:if>><td>${city.name}</td>
+			</option>
+		</c:forEach>
+
+	</select>
+</div>
+</c:if>
+
+<script type="text/javascript">
+	function cityChanged(target){
+		if(loadPriceList && typeof(loadPriceList) == "function"){
+			loadPriceList(target)
+		}
+	}
+</script>

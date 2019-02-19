@@ -1,0 +1,14 @@
+<div class="formBar">
+	<ul>
+		<li><div class="buttonActive">
+				<div class="buttonContent">
+					<button type="submit"><%=rb.getString("common_commit_title")%></button>
+				</div>
+			</div></li>
+		<li><div class="button">
+				<div class="buttonContent">
+					<button type="button" class="close"><%=rb.getString("common_cancle_title")%></button>
+				</div>
+			</div></li>
+	</ul>
+</div>

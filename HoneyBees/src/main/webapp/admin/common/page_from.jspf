@@ -1,0 +1,61 @@
+
+<%
+	MessageFormat pageSize = new MessageFormat(
+			rb.getString("common_display_page_size_title"));
+%>
+
+<form id="pagerForm" method="post" action="<%=actionUrl%>">
+	<input type="hidden" name="pageNum" value="${pageNo}" /> <input
+		type="hidden" name="numPerPage" value="${pageSize}" /> <input
+		type="hidden" name="keyWords" value="${keyWords}" /> <input
+		type="hidden" name="funcId" value="${funcId}" /> <input type="hidden"
+		name="type" id="type" value="${type}" /> <input type="hidden"
+		name="status" value="${status}" /> <input type="hidden" name="way"
+		value="${way}" /> <input type="hidden" name="startTime"
+		value="${startTime}" /> <input type="hidden" name="endTime"
+		value="${endTime}" /> <input type="hidden" name="funcIds"
+		value="${funcIds}" /> <input type="hidden" name="tagIds"
+		value="${tagIds}" /> <input type="hidden" name="orderField"
+		value="${param.orderField}" /> <input type="hidden"
+		name="orderDirection" value="${param.orderDirection}" />
+		<input type="hidden"
+		name="extendType1" value="${param.extendType1}" />
+</form>
+
+<script type="text/javascript">
+	/**
+	导出记录
+	 */
+	function exportData(url) {
+		var $parent = navTab.getCurrentPanel();
+		var currentForm = $("#pagerForm", $parent).get(0);
+
+		url = url + "&export=1";
+
+		//遍历form表单所有元素
+		for (var i = 0; i < currentForm.length; i++) {
+			var element = currentForm[i];
+			url = url + "&" + element.name + "=" + element.value;
+
+		}
+		/* alert(url); */
+		window.location.href = url;
+	}
+	
+	/**
+	提交请求
+	*/
+	function commitRequest(url) {
+		var $parent = navTab.getCurrentPanel();
+		var currentForm = $("#pagerForm", $parent).get(0);
+
+		//遍历form表单所有元素
+		for (var i = 0; i < currentForm.length; i++) {
+			var element = currentForm[i];
+			url = url + "&" + element.name + "=" + element.value;
+
+		}
+		/* alert(url); */
+		window.location.href = url;
+	}
+</script>

@@ -1,0 +1,7 @@
+
+<!-- Admin password check -->
+<div class="unit">
+<label><%=rb.getString("admin_password_check")%>:</label>
+<input type="password" name="admin_password" size="30" placeholder="<%=rb.getString("admin_password_check_tips")%>"
+ class="required"/>
+</div>
