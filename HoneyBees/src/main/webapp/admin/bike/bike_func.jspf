@@ -1,0 +1,39 @@
+
+
+<script>
+function loadPriceList(target){
+	var priceType = document.getElementById("priceType");
+	if(priceType == null){
+		return;
+	}
+	htmlObj = $.ajax({
+		cache : true,
+		type : "get",
+		url : "city?requestType=80002&cityId="+target.value,
+		//data : $("#pageForm").serialize(),
+		async : false
+	});
+	var obj = jQuery.parseJSON(htmlObj.responseText);
+
+	if (obj.statusCode != 200) {
+		//alertMsg.error(obj.message, null);
+		alert(obj.message);
+	} else {
+
+		priceType.innerHTML = "";
+		obj.data.forEach(function(type){
+			var typeStr = "unknow"
+				if(type.unit_type == 1){
+					typeStr = "<%= unitType[0] %>"
+				}else if(type.unit_type == 2){
+					typeStr = "<%= unitType[1] %>"
+				}else if(type.unit_type == 3){
+					typeStr = "<%= unitType[2] %>"
+				}
+			priceType.innerHTML +="<option value='"+type.id+"'><td>"+type.price+"/"+typeStr+"</td></option>"
+		})
+	}
+}
+</script>
+
+
