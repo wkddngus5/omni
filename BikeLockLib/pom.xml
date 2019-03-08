@@ -15,10 +15,10 @@
             <artifactId>mina-core</artifactId>
             <version>2.0.16</version>
         </dependency>
-        <dependency>
+        <!-- <dependency>
             <groupId>com.omni.lock.upfile</groupId>
             <artifactId>BikeUpFileLib</artifactId>
             <version>1.5</version>
-        </dependency>
+        </dependency> -->
     </dependencies>
 </project>

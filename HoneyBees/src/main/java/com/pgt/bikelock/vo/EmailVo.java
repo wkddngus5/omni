@@ -175,6 +175,7 @@ public class EmailVo {
 	}
 	
 	public EmailVo(String receiver,String receiverName,String subject,String content){
+		this.sender = "test";
 		this.receiver = receiver;
 		this.receiverName = receiverName;
 		this.subject = subject;

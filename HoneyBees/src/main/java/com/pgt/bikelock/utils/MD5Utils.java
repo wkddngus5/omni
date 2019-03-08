@@ -76,9 +76,9 @@ public class MD5Utils {
 	}
 
 	public static void main(String[] args) {
-//		String key = getMD5("12345678");
+		String key = getMD5("this is a aes key for honneybes 234234");
 //		System.out.println(key);
-//		System.out.println(key.substring(0, 16)+";"+key.substring(16, 32));
-		System.out.println(getMD5("12345678"));
+		System.out.println(key.substring(0, 16)+";"+key.substring(16, 32));
+//		System.out.println(getMD5("12345678"));
 	}
 }

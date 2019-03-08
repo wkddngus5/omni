@@ -41,7 +41,7 @@ import com.omni.scooter.utils.CommandUtil;
 public class NinebotScooterListener implements IScooterNinebotCallback {
 	private static final Logger LOGGER = LoggerFactory.getLogger(NinebotScooterListener.class);
 	private   String DeviceType ="OM";
-	@Override
+	
 	public void setFilterDeviceType(String deviceType) {
 		DeviceType =deviceType;
 		
@@ -52,7 +52,7 @@ public class NinebotScooterListener implements IScooterNinebotCallback {
 		
 	}
 	
-	@Override
+	
 	public void doHandCommand(IoSession session, String message) {
 		String deviceCode =message.split(",")[1];
 		BaseEntity baseEntity = new BaseEntity(message);
@@ -185,125 +185,112 @@ public class NinebotScooterListener implements IScooterNinebotCallback {
 		controlRequestCallBack(entity,session);
 	}
 	 	
-	@Override
+	
 	public void onFailure(String msg) {
 
 	}
 
-	@Override
+	
 	public void onSuccessful(IoSession session, Object message) {
 
 	}
 	
 	
-	@Override
+	
 	public void deviceIccidCallBack(DeviceIccidEntity entity, IoSession session) {
 		
 	}
 	
-	@Override
+	
 	public void deviceMacCallBack(DeviceMacEntity entity, IoSession session) {
 		
 	}
 	
-	@Override
+	
 	public void deviceKeyCallBack(DeviceKeyEntity entity, IoSession session) {
 		
 	}
 
-	@Override
+	
 	public void updateResultCallBack(UpdateResultEntity entity, IoSession session) {
 		
 	}
 	
-	@Override
+	
 	public void updateDetailCallBack(UpdateDetailEntity entity, IoSession session) {
 		
 	}
 	
-	@Override
+	
 	public void updateVersionCallBack(UpdateVersionEntity entity, IoSession session) {
 		
 	}
 	
-	@Override
+	
 	public void errorCallBack(ErrorEntity entity, IoSession session) {
 		
 	}
 	
 	 
 
-	@Override
+	
 	public void reportCallBack(ReportEntity reportEntity, IoSession session) {
 		
 
 	}
 	
 
-	@Override
+	
 	public void controlRequestCallBack(ControlRequestEntity controlRequestEntity, IoSession session) {
 		 
 		
 	}
 
-	@Override
 	public void heartCallBack(HeartEntity heartEntity, IoSession session) {
 		
 	}
 
-	@Override
 	public void lockOpenCallBack(OpenLockEntity entity, IoSession session) {
 		
 	}
-	@Override
 	public void lockCloseCallBack(LockCloseEntity entity, IoSession session) {
 		
 	}
 	
-	@Override
 	public void iotSetCallBack(IotSetEntity entity, IoSession session) {
 		
 	}
 	
-	@Override
 	public void scooterInfo1CallBack(ScooterInfo1 entity, IoSession session) {
 		
 	}
-	@Override
 	public void scooterInfo2CallBack(ScooterInfo2 entity, IoSession session) {
 		
 	}
 	
-	@Override
 	public void scooterSet1CallBack(ScooterSet1Entity entity, IoSession session) {
 		
 	}
-	@Override
 	public void scooterSet2CallBack(ScooterSet2Entity entity, IoSession session) {
 		
 	}
 	
-	@Override
 	public void warnCallBack(WarnEntity entity, IoSession session) {
 		
 	}
 	
-	@Override
 	public void voiceCallBack(VoiceEntity entity, IoSession session) {
 		
 	}
 	
-	@Override
 	public void powerControlCallBack(PowerControlEntity entity, IoSession session) {
 		
 	}
 	
-	@Override
 	public void locationCallBack(LocationEntity entity, IoSession session) {
 		
 	}
 	
-	@Override
 	public void onMoreCommand(IoSession session, String message) {
 		
 	}
@@ -332,7 +319,6 @@ public class NinebotScooterListener implements IScooterNinebotCallback {
 		}
 	}
 
-	@Override
 	public void versionCallBack(VersionEntity entity, IoSession session) {
 		
 	}

@@ -48,17 +48,14 @@
 		<link>
 			<name>src/main/webapp/WEB-INF/lib/BikeUpFileLib.jar</name>
 			<type>1</type>
-			<locationURI>PARENT-4-PROJECT_LOC/%E6%89%93%E5%8C%85/BikeUpFileLib.jar</locationURI>
 		</link>
 		<link>
 			<name>src/main/webapp/WEB-INF/lib/ScooterLib.jar</name>
 			<type>1</type>
-			<locationURI>PARENT-4-PROJECT_LOC/%E6%89%93%E5%8C%85/ScooterLib.jar</locationURI>
 		</link>
 		<link>
 			<name>src/main/webapp/WEB-INF/lib/bikeLockLib.jar</name>
 			<type>1</type>
-			<locationURI>PARENT-4-PROJECT_LOC/%E6%89%93%E5%8C%85/bikeLockLib.jar</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>

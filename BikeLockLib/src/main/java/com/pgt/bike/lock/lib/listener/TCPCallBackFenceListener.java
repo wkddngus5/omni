@@ -14,7 +14,7 @@ public class TCPCallBackFenceListener implements CallBackInterface{
 	public static final boolean DEBUG=false;
 
 	
-	@Override
+	
 	public void setDeviceType(String deviceType) {
 		
 	}

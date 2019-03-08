@@ -345,7 +345,7 @@
 			<version>1.1.0</version>
 		</dependency>
 
-		<dependency>
+		<!-- <dependency>
 			<groupId>com.omni.purview</groupId>
 			<artifactId>OmniSharePurview</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
@@ -364,7 +364,7 @@
 			<groupId>com.omni.lock.upfile</groupId>
 			<artifactId>BikeUpFileLib</artifactId>
 			<version>0.1.0</version>
-		</dependency>
+		</dependency> -->
 	</dependencies>
 	<build>
 		<plugins>

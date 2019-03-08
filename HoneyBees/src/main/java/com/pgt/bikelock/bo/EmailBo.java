@@ -85,9 +85,12 @@ public class EmailBo {
 		}
 		EmailVo emailVo = new EmailVo(email, email, templateVo.getTitle(), content);
 		emailVo.setCode(code);
-		if(emailUtil.sendSystemEmail(emailVo)){
+		
+		//debug/test
+		emailVo.setStatus(1);
+//		if(emailUtil.sendSystemEmail(emailVo)){
 			emailDao.addEmail(emailVo);
-		}
+//		}
 		return emailVo.getStatus() == 1?true:false;
 	}
 	
